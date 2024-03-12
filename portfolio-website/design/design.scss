@@ -1,0 +1,484 @@
+@import "./common/variables";
+@import "./common/mixin";
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Navigation Styles */
+.navbar {
+  display: flex;
+  background-color: $white;
+  box-shadow: 0 -4px 17px $primary-color;
+  margin-bottom: 6px;
+  &__lists {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  &__list {
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s linear;
+    &:hover {
+      color: darken($secondary-color, 30%);
+    }
+  }
+}
+
+/* Banner Styles */
+.banner {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  $size-left: 35%;
+  $min-height: 600px;
+  line-height: 30px;
+  &__left {
+    width: $size-left;
+    height: $min-height;
+    background-color: $secondary-color;
+    position: relative;
+    transition: width 0.5s ease;
+  }
+  &__right {
+    width: 100% - $size-left;
+    height: $min-height;
+    background-color: $primary-color;
+    color: $white;
+    position: relative;
+    transition: width 0.5s ease;
+  }
+  &__profile {
+    position: absolute;
+    left: 100%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 500px;
+    z-index: 1;
+    filter: drop-shadow(-19px 4px 13px #0b0421);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  &__content {
+    position: absolute;
+    left: 16%;
+    top: 20%;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    animation: fadeIn 1s ease forwards;
+  }
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    line-height: 40px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease 0.5s forwards;
+    opacity: 0;
+    &--l {
+      font-size: 40px;
+    }
+    &--m {
+      font-size: 30px;
+    }
+  }
+  &__description {
+    font-size: 30px;
+    font-family: "Caveat", cursive;
+    letter-spacing: 5px;
+    animation: fadeIn 1s ease 1s forwards;
+    opacity: 0;
+  }
+}
+
+/* Link Animation */
+.link {
+  text-decoration: none;
+  color: $white;
+  transition: color 0.3s linear;
+  margin-top: 30px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  &:hover {
+    color: $secondary-color;
+    cursor: pointer;
+  }
+}
+
+/* Banner Content Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  padding: 50px 50px;
+}
+
+.title {
+  font-size: 32px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  &__end {
+    color: $secondary-color;
+  }
+}
+
+.card {
+  padding: 20px;
+  background-color: $primary-color;
+  width: 250px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 2px 8px #000;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize(#000, 0.1);
+  }
+
+  & + & {
+    margin-left: 20px;
+  }
+
+  &--services1 {
+    background-image: url("../images/services1.jpeg");
+  }
+  &--services2 {
+    background-image: url("../images/services2.jpeg");
+  }
+  &--services3 {
+    background-image: url("../images/services3.jpeg");
+  }
+  &--services4 {
+    background-image: url("../images/services4.jpeg");
+  }
+
+  %index-set {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    @extend %index-set;
+    animation: fadeInUp 1s forwards;
+
+    &--s {
+      font-size: 14px;
+    }
+
+    &--l {
+      margin: 40px 0 20px;
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    @extend %index-set;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s forwards;
+  }
+
+  &__btn {
+    @extend %index-set;
+
+    &:hover {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+
+  // Keyframe Animation
+  @keyframes cardAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  animation: cardAnimation 1s 3;
+}
+@property --progress-value {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes html-progress {
+  to {
+    --progress-value: 95;
+  }
+}
+
+@keyframes css-progress {
+  to {
+    --progress-value: 99;
+  }
+}
+
+@keyframes js-progress {
+  to {
+    --progress-value: 85;
+  }
+}
+
+.progress-bar-container {
+  width: 25%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+}
+.progress-bar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar::before {
+  counter-reset: percentage var(--progress-value);
+  content: counter(percentage) "%";
+}
+
+.html {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient($primary-color calc(var(--progress-value) * 1%), $white 0);
+  animation: html-progress 2s 1 forwards;
+  &::before {
+    animation: html-progress 2s 1 forwards;
+  }
+}
+
+.css {
+  background: radial-gradient(
+      closest-side,
+      white 79%,
+      transparent 80% 100%,
+      white 0
+    ),
+    conic-gradient($primary-color calc(var(--progress-value) * 1%), $white 0);
+  animation: css-progress 2s 1 forwards;
+  &::before {
+    animation: css-progress 2s 1 forwards;
+  }
+}
+
+.js {
+  background: radial-gradient(
+      closest-side,
+      white 79%,
+      transparent 80% 100%,
+      white 0
+    ),
+    conic-gradient($primary-color calc(var(--progress-value) * 1%), $white 0);
+  animation: js-progress 2s 1 forwards;
+  &::before {
+    animation: js-progress 2s 1 forwards;
+  }
+}
+
+progress {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.section:nth-child(even) {
+  background-color: $secondary-color;
+}
+.section-portfolio {
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.portfolio {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: {
+    color: red;
+    size: contain;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize($primary-color, 0.5);
+  }
+  &:nth-last-of-type(odd) {
+    border: 5px solid $primary-color;
+  }
+  &:nth-last-of-type(even) {
+    border: 5px solid $secondary-color;
+  }
+  &:nth-of-type(1) {
+    background-image: url("../images/portfolio-1.jpg");
+  }
+  &:nth-of-type(2) {
+    background-image: url("../images/portfolio-2.jpg");
+  }
+  &:nth-of-type(3) {
+    background-image: url("../images/portfolio-3.jpg");
+  }
+  &:nth-of-type(4) {
+    background-image: url("../images/portfolio-4.jpg");
+  }
+  &:nth-of-type(5) {
+    background-image: url("../images/portfolio-4.jpg");
+  }
+  &:nth-of-type(6) {
+    background-image: url("../images/portfolio-3.jpg");
+  }
+  &:nth-of-type(7) {
+    background-image: url("../images/portfolio-2.jpg");
+  }
+  &:nth-of-type(8) {
+    background-image: url("../images/portfolio-1.jpg");
+  }
+  &:hover &__content {
+    height: 100%;
+    transition: height 0.2s ease;
+    padding: 14px;
+  }
+  &__content {
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: transparentize($white, 0.2);
+    overflow: hidden;
+  }
+  &__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  &__desc {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  &__link {
+    text-decoration: none;
+    color: $primary-color;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  background-color: red;
+  &__sec {
+    width: 50%;
+    &:nth-of-type(1) {
+      background: {
+        image: url("../images/men.jpeg");
+        size: cover;
+      }
+      filter: brightness(0.6);
+    }
+    &:nth-of-type(2) {
+      background-color: $black;
+      color: $white;
+    }
+  }
+  form {
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    textarea {
+      height: 120px;
+    }
+  }
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+}

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html> <!-- Document Type Declaration -->
+<html lang="en"> <!-- Opening HTML Tag -->
+<head> <!-- Opening Head Tag -->
+<meta charset="UTF-8" /> <!-- Character Encoding -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Viewport Meta Tag -->
+<title>Debit Card Design</title> <!-- Title of the Webpage -->
+<link rel="stylesheet" href="./style.css"> <!-- Linking External Stylesheet -->
+</head> <!-- Closing Head Tag -->
+<body> <!-- Opening Body Tag -->
+  <div class="card"> <!-- Div for Card Container -->
+    <div class="card__info"> <!-- Div for Card Information -->
+      <div class="card__logo">Coding Bank</div> <!-- Div for Card Logo -->
+      <div class="card__chip"> <!-- Div for Card Chip -->
+        <svg class="card__chip-lines" role="img" width="20px" height="20px" viewBox="0 0 100 100" aria-label="Chip"> <!-- SVG Element for Card Chip -->
+          <g opacity="0.8"> <!-- Group Element with Opacity -->
+            <polyline points="0,50 35,50" fill="none" stroke="#000" stroke-width="2" /> <!-- Polyline Element for Chip Design -->
+            <polyline points="0,20 20,20 35,35" fill="none" stroke="#000" stroke-width="2" /> <!-- Polyline Element for Chip Design -->
+            <polyline points="50,0 50,35" fill="none" stroke="#000" stroke-width="2" /> <!-- Polyline Element for Chip Design -->
+            <polyline points="65,35 80,20 100,20" fill="none" stroke="#000" stroke-width="2" /> <!-- Polyline Element for Chip Design -->
+            <polyline points="100,50 65,50" fill="none" stroke="#000" stroke-width="2" /> <!-- Polyline Element for Chip Design -->
+            <polyline points="35,35 65,35 65,65 35,65 35,35" fill="none" stroke="#000" stroke-width="2" /> <!-- Polyline Element for Chip Design -->
+            <polyline points="0,80 20,80 35,65" fill="none" stroke="#000" stroke-width="2" /> <!-- Polyline Element for Chip Design -->
+            <polyline points="50,100 50,65" fill="none" stroke="#000" stroke-width="2" /> <!-- Polyline Element for Chip Design -->
+            <polyline points="65,65 80,80 100,80" fill="none" stroke="#000" stroke-width="2" /> <!-- Polyline Element for Chip Design -->
+          </g> <!-- Closing Group Element -->
+        </svg> <!-- Closing SVG Element -->
+        <div class="card__chip-texture"></div> <!-- Div for Chip Texture -->
+      </div> <!-- Closing Card Chip Div -->
+      <div class="card__type">debit</div> <!-- Div for Card Type -->
+      <div class="card__number"> <!-- Div for Card Number -->
+        <span class="card__digit-group">1111</span> <!-- Span for Card Number Group -->
+        <span class="card__digit-group">2222</span> <!-- Span for Card Number Group -->
+        <span class="card__digit-group">3333</span> <!-- Span for Card Number Group -->
+        <span class="card__digit-group">4444</span> <!-- Span for Card Number Group -->
+      </div> <!-- Closing Card Number Div -->
+      <div class="card__valid-thru" aria-label="Valid thru">Valid<br>thru</div> <!-- Div for Valid Through -->
+      <div class="card__exp-date"><time datetime="2038-01">01/26</time></div> <!-- Div for Expiry Date -->
+      <div class="card__name" aria-label="Dee Stroyer">Abbyshek Sharma</div> <!-- Div for Card Holder Name -->
+      <div class="card__vendor" role="img" aria-labelledby="card-vendor"> <!-- Div for Card Vendor -->
+        <span id="card-vendor" class="card__vendor-sr">Mastercard</span> <!-- Span for Card Vendor -->
+      </div> <!-- Closing Card Vendor Div -->
+    </div> <!-- Closing Card Information Div -->
+    <div class="card__texture"></div> <!-- Div for Card Texture -->
+  </div> <!-- Closing Card Container Div -->
+</body> <!-- Closing Body Tag -->
+</html> <!-- Closing HTML Tag -->

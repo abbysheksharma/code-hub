@@ -1,0 +1,327 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #00796b;
+  color: white;
+  padding: 15px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative; /* Added for sub-navigation positioning */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  transition: transform 0.3s ease; /* Add animation to navbar links */
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  transform: translateY(-3px); /* Add hover effect */
+}
+
+/* Sub-navigation Styles */
+.navbar ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #00796b; /* Teal */
+  padding: 10px 0;
+  z-index: 1; /* Ensure sub-navigation appears above other content */
+  transition: all 0.3s ease; /* Added transition effect */
+}
+
+.navbar li:hover > ul {
+  display: block;
+  animation: fadeIn 0.3s ease; /* Add fade-in animation */
+}
+
+.navbar ul ul li {
+  display: block;
+  margin: 0;
+}
+
+.navbar ul ul li a {
+  padding: 10px 15px; /* Adjusted padding */
+  white-space: nowrap; /* Prevent text from breaking */
+}
+
+/* Banner Styles */
+.banner {
+  position: relative;
+  background-image: url('./images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px; /* Adjust height as needed */
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  animation: zoomIn 0.5s ease; /* Add zoom-in animation */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+
+.banner-content {
+  z-index: 1; /* Ensure content appears above overlay */
+}
+
+.banner h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 18px;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.banner button {
+  background-color: #00796b; /* Teal */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+
+.banner button:hover {
+  background-color: #005b4f; /* Darker teal on hover */
+  transform: scale(1.1); /* Add hover effect */
+}
+
+/* Section Styles */
+.services {
+  background-color: #f5f5f5; /* Light gray */
+  padding: 50px 0;
+  text-align: center;
+  animation: slideInUp 0.5s ease; /* Add slide-in animation */
+}
+
+.services-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #00796b; /* Teal */
+}
+
+.services-description {
+  font-size: 18px;
+  color: #555; /* Dark gray */
+}
+
+/* Card Styles */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 100px;
+  background-color: #eee;
+  animation: fadeIn 0.5s ease; /* Add fade-in animation */
+}
+
+.card {
+  flex: 0 0 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card+.card {
+  margin-left: 50px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Add hover effect */
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333; /* Dark gray */
+}
+
+.card-description {
+  font-size: 16px;
+  color: #666; /* Medium gray */
+  margin-bottom: 20px;
+}
+
+.btn-read-more {
+  background-color: #00796b; /* Teal */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-read-more:hover {
+  background-color: #005b4f; /* Darker teal on hover */
+  transform: scale(1.05); /* Add hover effect */
+}
+
+/* Contact Form Styles */
+.form-section {
+  padding: 50px;
+  animation: fadeIn 0.5s ease; /* Add fade-in animation */
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  padding: 50px;
+}
+
+.contact-form:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input[type="submit"] {
+  background-color: #00796b; /* Teal */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #005b4f; /* Darker teal on hover */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #00796b; /* Teal */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  animation: slideInUp 0.5s ease; /* Add slide-in animation */
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(0);
+  }
+  to {
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

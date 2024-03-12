@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  /* Ensures that padding and border are included in the element's total width and height */
+  font-size: 20px;
+  /* Sets the default font size to 20 pixels for all elements */
+}
+
+body {
+  font: 1em/1.618 Inter, sans-serif;
+  /* Sets the font family, font size, and line height for the body text */
+
+  display: flex;
+  /* Makes the body a flex container */
+  align-items: center;
+  /* Aligns flex items vertically in the center */
+  justify-content: center;
+  /* Aligns flex items horizontally in the center */
+
+  min-height: 100vh;
+  /* Sets the minimum height of the body to 100% of the viewport height */
+  padding: 30px;
+  /* Adds padding around the content inside the body */
+  margin: 0;
+  /* Removes margin from the body */
+
+  color: #224;
+  /* Sets the text color */
+  background: url("./assets/colorful-bg.jpeg") center / cover no-repeat fixed;
+  /* Sets the background image */
+}
+
+.card {
+  max-width: 300px;
+  /* Sets the maximum width of the card */
+  min-height: 200px;
+  /* Sets the minimum height of the card */
+  display: flex;
+  /* Makes the card a flex container */
+  flex-direction: column;
+  /* Arranges flex items vertically */
+  justify-content: space-between;
+  /* Distributes space evenly between flex items */
+
+  max-width: 500px;
+  /* Overrides the previous maximum width to 500px */
+  height: 300px;
+  /* Sets the height of the card */
+  padding: 35px;
+  /* Adds padding inside the card */
+
+  border: 1px solid rgba(255, 255, 255, .25);
+  /* Sets the border style */
+  border-radius: 20px;
+  /* Rounds the corners of the card */
+  background-color: rgba(255, 255, 255, 0.45);
+  /* Sets the background color with opacity */
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  /* Adds a box shadow to the card */
+
+  backdrop-filter: blur(5px);
+  /* Applies a blur effect to the background behind the card */
+}
+
+.card-footer {
+  font-size: 0.65em;
+  /* Sets the font size of the card footer */
+  color: #446;
+  /* Sets the text color of the card footer */
+}

@@ -1,0 +1,92 @@
+/* Set up the body element */
+body {
+    /* Center the content both horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Set the height of the body to 100% of the viewport height */
+    height: 100vh;
+    /* Remove default margin */
+    margin: 0;
+    /* Set background color to black */
+    background-color: #000;
+    /* Hide overflowing content */
+    overflow: hidden;
+  }
+  
+  /* Style for the container of the cube */
+  .cube-container {
+    /* Set width and height of the container */
+    width: 200px;
+    height: 200px;
+    /* Set perspective for 3D transforms */
+    perspective: 1000px;
+  }
+  
+  /* Style for the cube */
+  .cube {
+    /* Set width and height to fill the container */
+    width: 100%;
+    height: 100%;
+    /* Set position to relative for absolute positioning of faces */
+    position: relative;
+    /* Preserve 3D transformations */
+    transform-style: preserve-3d;
+    /* Apply rotation animation */
+    animation: rotateCubes 6s infinite linear;
+  }
+  
+  /* Style for each face of the cube */
+  .face {
+    /* Position the faces absolutely within the cube */
+    position: absolute;
+    /* Set width and height */
+    width: 200px;
+    height: 200px;
+    /* Make background transparent */
+    background-color: transparent;
+    /* Add border to simulate cube edges */
+    border: 2px solid #fff;
+    /* Ensure background covers entire face */
+    background-size: cover;
+  }
+  
+  /* Define transformations for each face */
+  .face:nth-child(1) {
+    transform: rotateY(0deg) translateZ(100px);
+    /* Set background image for this face */
+    background-image: url("./images/1.png");
+  }
+  .face:nth-child(2) {
+    transform: rotateX(90deg) translateZ(100px);
+    background-image: url("./images/2.png");
+  }
+  .face:nth-child(3) {
+    transform: rotateY(180deg) translateZ(100px);
+    background-image: url("./images/3.png");
+  }
+  .face:nth-child(4) {
+    transform: rotateX(-90deg) translateZ(100px);
+    background-image: url("./images/4.png");
+  }
+  .face:nth-child(5) {
+    transform: rotateY(90deg) translateZ(100px);
+    background-image: url("./images/5.png");
+  }
+  .face:nth-child(6) {
+    transform: rotateY(270deg) translateZ(100px);
+    background-image: url("./images/6.png");
+  }
+  
+  /* Keyframe animation for cube rotation */
+  @keyframes rotateCubes {
+    /* Define starting rotation */
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    /* Define ending rotation */
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+  

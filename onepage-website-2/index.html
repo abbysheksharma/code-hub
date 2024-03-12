@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li>
+                    <a href="#services">Services</a>
+                    <!-- Sub-navigation for Services -->
+                    <ul>
+                        <li><a href="#service1">Service 1</a></li>
+                        <li><a href="#service2">Service 2</a></li>
+                        <li><a href="#service3">Service 3</a></li>
+                        <li><a href="#service4">Service 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="banner">
+      <div class="overlay"></div>
+      <div class="banner-content">
+          <h2>Welcome to Our School</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt nisi cum explicabo alias soluta eos nulla dolor minima repellendus ipsum maxime odit error cumque, quae adipisci itaque quis, similique unde?</p>
+          <button>Learn More</button>
+      </div>
+  </section>
+
+  <div class="card-container">
+    <!-- First Card -->
+    <div class="card">
+        <img src="./images/card1.jpeg" alt="Image">
+        <div class="card-content">
+            <h3 class="card-title">Card Title 1</h3>
+            <p class="card-description">This is a brief description of the card content. You can add more details here.</p>
+            <button class="btn-read-more">Read More</button>
+        </div>
+    </div>
+    <!-- Second Card -->
+    <div class="card">
+        <img src="./images/card2.jpeg" alt="Image">
+        <div class="card-content">
+            <h3 class="card-title">Card Title 2</h3>
+            <p class="card-description">This is a brief description of the card content. You can add more details here.</p>
+            <button class="btn-read-more">Read More</button>
+        </div>
+    </div>
+    <!-- Third Card -->
+    <div class="card">
+        <img src="./images/card3.jpeg" alt="Image">
+        <div class="card-content">
+            <h3 class="card-title">Card Title 3</h3>
+            <p class="card-description">This is a brief description of the card content. You can add more details here.</p>
+            <button class="btn-read-more">Read More</button>
+        </div>
+    </div>
+</div>
+
+<section class="form-section">
+  <form class="contact-form">
+    <h3>Contact Us</h3>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+</section>
+
+<footer class="footer">
+  <p>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+  </p>
+  <p>&copy; 2024 School Name. All rights reserved. | Designed by <a href="https://example.com" target="_blank">Abbyshek Sharma</a></p>
+</footer>
+</body>
+</html>

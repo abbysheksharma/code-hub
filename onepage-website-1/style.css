@@ -1,0 +1,202 @@
+/* Reset some default styles */
+* {
+  margin: 0; /* Reset margin to 0 */
+  padding: 0; /* Reset padding to 0 */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set the font family for the body text */
+  background-color: #f7f7f7; /* Set the background color for the body */
+  color: #333; /* Set the text color for the body */
+}
+/* Header styles */
+header {
+  background-color: #333; /* Set the background color for the header */
+  color: #fff; /* Set the text color for the header */
+  padding: 20px; /* Add padding around the header content */
+  text-align: center; /* Align the header content to the center */
+}
+header h1 {
+  font-size: 36px; /* Set the font size for the header title */
+  margin-bottom: 10px; /* Add margin at the bottom of the header title */
+}
+header nav a {
+  color: #fff; /* Set the text color for the navigation links */
+  text-decoration: none; /* Remove underline from the navigation links */
+  margin: 0 10px; /* Add margin around the navigation links */
+}
+/* Hero section styles */
+.hero {
+  background-image: linear-gradient(to bottom, #3498db, #2c3e50); /* Set a gradient background for the hero section */
+  color: #fff; /* Set the text color for the hero section */
+  text-align: center; /* Align the hero content to the center */
+  padding: 100px 0; /* Add padding to the hero section */
+  position: relative; /* Set the position to relative for absolute positioning of child elements */
+}
+.hero h2 {
+  font-size: 48px; /* Set the font size for the hero title */
+  margin-bottom: 20px; /* Add margin at the bottom of the hero title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow to the hero title */
+}
+.hero p {
+  font-size: 18px; /* Set the font size for the hero paragraph */
+  margin-bottom: 20px; /* Add margin at the bottom of the hero paragraph */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add text shadow to the hero paragraph */
+}
+.hero .cta {
+  display: inline-block; /* Set the display to inline-block for the call-to-action button */
+  background-color: #fff; /* Set the background color for the call-to-action button */
+  color: #333; /* Set the text color for the call-to-action button */
+  text-decoration: none; /* Remove underline from the call-to-action button */
+  padding: 10px 20px; /* Add padding to the call-to-action button */
+  border-radius: 5px; /* Add border radius to the call-to-action button */
+  font-weight: bold; /* Set the font weight for the call-to-action button */
+  font-size: 18px; /* Set the font size for the call-to-action button */
+  transition: background-color 0.3s ease; /* Add transition effect to the call-to-action button */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow to the call-to-action button */
+}
+.hero .cta:hover {
+  background-color: #ddd; /* Change background color on hover for the call-to-action button */
+}
+/* About section styles */
+.about {
+  background-image: linear-gradient(to bottom, #27ae60, #2ecc71); /* Set a gradient background for the about section */
+  padding: 100px 0; /* Add padding to the about section */
+  text-align: center; /* Align the about content to the center */
+  color: #fff; /* Set the text color for the about section */
+}
+.about h2 {
+  font-size: 36px; /* Set the font size for the about title */
+  margin-bottom: 20px; /* Add margin at the bottom of the about title */
+}
+.about p {
+  font-size: 18px; /* Set the font size for the about paragraph */
+  margin-bottom: 20px; /* Add margin at the bottom of the about paragraph */
+}
+/* Services section styles */
+.services {
+  background-image: linear-gradient(to bottom, #f39c12, #f1c40f); /* Set a gradient background for the services section */
+  padding: 100px 0; /* Add padding to the services section */
+  text-align: center; /* Align the services content to the center */
+  color: #fff; /* Set the text color for the services section */
+}
+.services h2 {
+  font-size: 36px; /* Set the font size for the services title */
+  margin-bottom: 20px; /* Add margin at the bottom of the services title */
+}
+.services .service {
+  display: inline-block; /* Set the display to inline-block for the service items */
+  width: 30%; /* Set the width of the service items */
+  margin: 0 2%; /* Add margin around the service items */
+  padding: 30px; /* Add padding to the service items */
+  background-color: #fff; /* Set the background color for the service items */
+  border-radius: 5px; /* Add border radius to the service items */
+  margin-bottom: 20px; /* Add margin at the bottom of the service items */
+  vertical-align: top; /* Align the service items to the top */
+  transition: background-color 0.3s ease; /* Add transition effect to the service items */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow to the service items */
+}
+.services .service:hover {
+  background-color: #f0f0f0; /* Change background color on hover for the service items */
+}
+.services .service h3 {
+  font-size: 24px; /* Set the font size for the service titles */
+  margin-bottom: 10px; /* Add margin at the bottom of the service titles */
+}
+.services .service p {
+  font-size: 16px; /* Set the font size for the service descriptions */
+}
+/* Portfolio section styles */
+.portfolio {
+  background-image: linear-gradient(to bottom, #e74c3c, #c0392b); /* Set a gradient background for the portfolio section */
+  padding: 100px 0; /* Add padding to the portfolio section */
+  text-align: center; /* Align the portfolio content to the center */
+  color: #fff; /* Set the text color for the portfolio section */
+}
+.portfolio h2 {
+  font-size: 36px; /* Set the font size for the portfolio title */
+  margin-bottom: 20px; /* Add margin at the bottom of the portfolio title */
+}
+.portfolio .project {
+  display: inline-block; /* Set the display to inline-block for the project items */
+  width: 30%; /* Set the width of the project items */
+  margin: 0 2%; /* Add margin around the project items */
+  margin-bottom: 20px; /* Add margin at the bottom of the project items */
+  position: relative; /* Set the position to relative for absolute positioning of child elements */
+}
+.portfolio .project div {
+  height: 300px; /* Set the height of the project item container */
+  border-radius: 5px; /* Add border radius to the project item container */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow to the project item container */
+  overflow: hidden; /* Hide overflowing content of the project item container */
+  position: relative; /* Set the position to relative for absolute positioning of child elements */
+}
+.portfolio .project .overlay {
+  position: absolute; /* Set the position to absolute for absolute positioning within the project item */
+  top: 0; /* Position the overlay at the top */
+  left: 0; /* Position the overlay at the left */
+  width: 100%; /* Set the width of the overlay to 100% */
+  height: 100%; /* Set the height of the overlay to 100% */
+  background: rgba(0, 0, 0, 0.5); /* Set the background color of the overlay with transparency */
+  opacity: 0; /* Set the initial opacity to 0 */
+  transition: opacity 0.3s ease; /* Add transition effect to the opacity property */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Align items horizontally in the center */
+}
+.portfolio .project:hover .overlay {
+  opacity: 1; /* Change opacity to 1 on hover to reveal the overlay */
+}
+.portfolio .project .overlay h3 {
+  color: #fff; /* Set the text color for the overlay title */
+  font-size: 24px; /* Set the font size for the overlay title */
+}
+/* Contact section styles */
+.contact {
+  background-image: linear-gradient(to bottom, #9b59b6, #8e44ad); /* Set a gradient background for the contact section */
+  color: #fff; /* Set the text color for the contact section */
+  padding: 100px 0; /* Add padding to the contact section */
+  text-align: center; /* Align the contact content to the center */
+}
+.contact h2 {
+  font-size: 36px; /* Set the font size for the contact title */
+  margin-bottom: 20px; /* Add margin at the bottom of the contact title */
+}
+.contact p {
+  font-size: 18px; /* Set the font size for the contact paragraph */
+  margin-bottom: 20px; /* Add margin at the bottom of the contact paragraph */
+}
+.contact form {
+  max-width: 600px; /* Set the maximum width for the contact form */
+  margin: 0 auto; /* Center the contact form horizontally */
+}
+.contact input,
+.contact textarea {
+  width: 100%; /* Set the width of the input fields and textarea to 100% */
+  padding: 10px; /* Add padding to the input fields and textarea */
+  margin-bottom: 20px; /* Add margin at the bottom of the input fields and textarea */
+  border-radius: 5px; /* Add border radius to the input fields and textarea */
+  border: 1px solid #ddd; /* Set the border style for the input fields and textarea */
+  font-size: 16px; /* Set the font size for the input fields and textarea */
+}
+.contact button {
+  background-image: linear-gradient(to bottom, #3498db, #2980b9); /* Set a gradient background for the contact button */
+  color: #fff; /* Set the text color for the contact button */
+  border: none; /* Remove border from the contact button */
+  padding: 10px 20px; /* Add padding to the contact button */
+  border-radius: 5px; /* Add border radius to the contact button */
+  font-size: 18px; /* Set the font size for the contact button */
+  cursor: pointer; /* Set cursor to pointer for the contact button */
+  transition: background-color 0.3s ease; /* Add transition effect to the background color of the contact button */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow to the contact button */
+}
+.contact button:hover {
+  background-image: linear-gradient(to bottom, #2980b9, #1f618d); /* Change gradient background on hover for the contact button */
+}
+/* Footer styles */
+footer {
+  background-color: #333; /* Set the background color for the footer */
+  color: #fff; /* Set the text color for the footer */
+  padding: 20px 0; /* Add padding to the footer */
+  text-align: center; /* Align the content of the footer to the center */
+}

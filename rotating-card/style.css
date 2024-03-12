@@ -1,0 +1,112 @@
+body {
+  font-family: 'Oswald', sans-serif; /* Specifies the font family for the entire body of the document */
+  background-color: #000000; /* Sets the background color of the body to a dark black */
+}
+
+.container {
+  display: flex; /* Specifies that the container should display its children as flex items */
+  gap: 20px; /* Specifies a gap of 20px between the flex items inside the container */
+  justify-content: center; /* Centers the flex items horizontally within the container */
+  align-items: center; /* Centers the flex items vertically within the container */
+  height: 100vh; /* Sets the height of the container to 100% of the viewport height */
+}
+
+.card {
+  height: 300px; /* Sets the height of the card to 300px */
+  width: 300px; /* Sets the width of the card to 300px */
+  margin: 10px 0; /* Sets a margin of 10px on the top and bottom and 0 on the left and right */
+  transition: ease all 2.3s; /* Specifies the transition effect for all properties with a duration of 2.3s and easing function ease */
+  perspective: 1200px; /* Specifies the perspective view for the 3D transformations */
+}
+
+.card:hover .cover {
+  transform: rotateX(0deg) rotateY(-180deg); /* Rotates the cover element on the Y-axis when the card is hovered */
+}
+
+.card:hover .cover:before {
+  transform: translateZ(30px); /* Translates the cover element along the Z-axis when the card is hovered */
+}
+
+.card:hover .cover:after {
+  background-color: black; /* Changes the background color of the cover element to black when the card is hovered */
+}
+
+.card:hover .cover h1 {
+  transform: translateZ(100px); /* Translates the h1 element along the Z-axis when the card is hovered */
+}
+
+.card:hover .cover .price {
+  transform: translateZ(60px); /* Translates the price element along the Z-axis when the card is hovered */
+}
+
+.card:hover .cover a {
+  transform: translateZ(-60px) rotatey(-180deg); /* Translates the link element along the Z-axis and rotates it on the Y-axis when the card is hovered */
+}
+
+.card .cover {
+  position: absolute; /* Specifies the cover element to be positioned absolutely */
+  height: 100%; /* Sets the height of the cover element to 100% */
+  width: 100%; /* Sets the width of the cover element to 100% */
+  transform-style: preserve-3d; /* Specifies that the cover element should preserve its 3D transformations */
+  transition: ease all 2.3s; /* Specifies the transition effect for all properties with a duration of 2.3s and easing function ease */
+  background-size: cover; /* Specifies that the background image should cover the entire container of the cover element */
+  background-position: center center; /* Specifies the center position for the background image */
+  background-repeat: no-repeat; /* Specifies that the background image should not repeat */
+}
+
+.card .cover:before {
+  content: ''; /* Adds an empty content before the cover element */
+  position: absolute; /* Specifies the pseudo-element to be positioned absolutely */
+  border: 5px solid rgba(255, 255, 255, .5); /* Sets a border for the pseudo-element with a semi-transparent white color */
+  box-shadow: 0 0 12px rgba(0, 0, 0, .3); /* Adds a shadow effect to the pseudo-element */
+  top: 20px; /* Sets the top position of the pseudo-element */
+  left: 20px; /* Sets the left position of the pseudo-element */
+  right: 20px; /* Sets the right position of the pseudo-element */
+  bottom: 20px; /* Sets the bottom position of the pseudo-element */
+  z-index: 2; /* Sets the stacking order of the pseudo-element */
+  transition: ease all 2.3s; /* Specifies the transition effect for all properties with a duration of 2.3s and easing function ease */
+  transform-style: preserve-3d; /* Specifies that the pseudo-element should preserve its 3D transformations */
+  transform: translateZ(0px); /* Translates the pseudo-element along the Z-axis */
+}
+
+.card .cover:after {
+  content: ''; /* Adds an empty content after the cover element */
+  position: absolute; /* Specifies the pseudo-element to be positioned absolutely */
+  top: 0px; /* Sets the top position of the pseudo-element */
+  left: 0px; /* Sets the left position of the pseudo-element */
+  right: 0px; /* Sets the right position of the pseudo-element */
+  bottom: 0px; /* Sets the bottom position of the pseudo-element */
+  z-index: 2; /* Sets the stacking order of the pseudo-element */
+  transition: ease all 1.3s; /* Specifies the transition effect for all properties with a duration of 1.3s and easing function ease */
+  background: rgba(0, 0, 0, .4); /* Sets the background color of the pseudo-element to a semi-transparent black */
+}
+
+.card .cover.item {
+  background-image: url('./images/bg.png'); /* Sets the background image for the cover element */
+}
+
+.card > .cover > h1 {
+  font-weight: 600; /* Sets the font weight of the h1 element to 600 (bold) */
+  position: absolute; /* Specifies the h1 element to be positioned absolutely */
+  bottom: 55px; /* Sets the bottom position of the h1 element */
+  left: 50px; /* Sets the left position of the h1 element */
+  color: white; /* Sets the text color of the h1 element to white */
+  transform-style: preserve-3d; /* Specifies that the h1 element should preserve its 3D transformations */
+  transition: ease all 2.3s; /* Specifies the transition effect for all properties with a duration of 2.3s and easing function ease */
+  z-index: 3; /* Sets the stacking order of the h1 element */
+  font-size: 2em; /* Sets the font size of the h1 element */
+  transform: translateZ(0px); /* Translates the h1 element along the Z-axis */
+}
+
+.card > .card-back {
+  position: absolute; /* Specifies the card-back element to be positioned absolutely */
+  height: 100%; /* Sets the height of the card-back element to 100% */
+  width: 100%; /* Sets the width of the card-back element to 100% */
+  background: #0b0f08; /* Sets the background color of the card-back element */
+  transform-style: preserve-3d; /* Specifies that the card-back element should preserve its 3D transformations */
+  transition: ease all 2.3s; /* Specifies the transition effect for all properties with a duration of 2.3s and easing function ease */
+  transform: translateZ(-1px); /* Translates the card-back element along the Z-axis */
+  display: flex; /* Specifies that the card-back element should display its children as flex items */
+  align-items: center; /* Specifies the alignment of the flex items along the cross axis */
+  justify-content: center; /* Specifies the alignment of the flex items along the main axis */
+}

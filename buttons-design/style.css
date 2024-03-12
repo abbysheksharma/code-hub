@@ -1,0 +1,82 @@
+body{
+  padding: 50px;
+}
+.button-1 {
+  background: #5E5DF0; /* Sets the background color of the button to a shade of blue */
+  border-radius: 999px; /* Rounds all corners of the button, creating a circular shape */
+  box-shadow: #5E5DF0 0 10px 20px -10px; /* Adds a shadow effect to the button:
+                                              - Color: #5E5DF0 (blue)
+                                              - Horizontal offset: 0
+                                              - Vertical offset: 10px
+                                              - Blur radius: 20px
+                                              - Spread radius: -10px */
+  box-sizing: border-box; /* Specifies the box model to include the padding and border in the button's total width and height */
+  color: #FFFFFF; /* Sets the text color of the button to white */
+  cursor: pointer; /* Specifies the cursor type when hovering over the button */
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif; /* Specifies the font family for the button text */
+  font-size: 16px; /* Sets the font size of the button text */
+  font-weight: 700; /* Sets the font weight to bold for the button text */
+  line-height: 24px; /* Sets the line height of the button text */
+  opacity: 1; /* Sets the opacity of the button to fully visible */
+  outline: 0 solid transparent; /* Specifies the outline style of the button */
+  padding: 8px 18px; /* Sets the padding inside the button: 8px (top and bottom), 18px (left and right) */
+  user-select: none; /* Specifies that the button text cannot be selected by the user */
+  width: fit-content; /* Sets the width of the button to fit its content */
+  word-break: break-word; /* Specifies how words should break if they exceed the button's width */
+  border: 0; /* Sets the border of the button to zero */
+}
+
+.button-2 {
+  background-color: #222; /* Sets the background color of the button to a dark shade of gray */
+  border-radius: 4px; /* Rounds the corners of the button */
+  border-style: none; /* Specifies no border style for the button */
+  box-sizing: border-box; /* Specifies the box model */
+  color: #fff; /* Sets the text color of the button to white */
+  cursor: pointer; /* Specifies the cursor type when hovering over the button */
+  display: inline-block; /* Specifies that the button should be displayed as an inline block element */
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif; /* Specifies the font family for the button text */
+  font-size: 16px; /* Sets the font size of the button text */
+  font-weight: 700; /* Sets the font weight to bold for the button text */
+  line-height: 1.5; /* Sets the line height of the button text */
+  min-height: 44px; /* Sets the minimum height of the button */
+  min-width: 10px; /* Sets the minimum width of the button */
+  outline: none; /* Specifies no outline for the button */
+  overflow: hidden; /* Specifies that content should be clipped if it overflows the button */
+  padding: 9px 20px 8px; /* Sets the padding inside the button: 9px (top), 20px (left and right), 8px (bottom) */
+  position: relative; /* Specifies the positioning context for the button */
+  text-align: center; /* Sets the alignment of the button text to the center */
+  text-transform: none; /* Specifies no text transformation */
+  user-select: none; /* Specifies that the button text cannot be selected by the user */
+  touch-action: manipulation; /* Specifies how touch events should be handled */
+}
+
+.button-2:hover,
+.button-2:focus {
+  opacity: .75; /* Reduces the opacity of the button when hovered or focused */
+}
+
+.button-3 {
+    display: inline-block; /* Specifies that the button should be displayed as an inline block element */
+    outline: 0; /* Specifies no outline for the button */
+    border: 0; /* Specifies no border for the button */
+    cursor: pointer; /* Specifies the cursor type when hovering over the button */
+    border-radius: 8px; /* Rounds the corners of the button */
+    padding: 14px 24px 16px; /* Sets the padding inside the button: 14px (top), 24px (left and right), 16px (bottom) */
+    font-size: 18px; /* Sets the font size of the button text */
+    font-weight: 700; /* Sets the font weight to bold for the button text */
+    line-height: 1; /* Sets the line height of the button text */
+    transition: transform 200ms,background 200ms; /* Specifies the transition effect for the button */
+    background: transparent; /* Sets the background color of the button to transparent */
+    color: #000000; /* Sets the text color of the button to black */
+    box-shadow: inset #1b9ada 0 0 0 3px ; /* Adds a shadow effect to the button:
+                                             - Color: #000000 (black)
+                                             - Horizontal offset: 0
+                                             - Vertical offset: 0
+                                             - Blur radius: 3px
+                                             - Spread radius: 0
+                                             - Inset: The shadow is inset into the button */
+}
+
+.button-3:hover {
+    transform: translateY(-2px); /* Moves the button vertically by -2px when hovered */
+}

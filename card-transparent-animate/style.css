@@ -1,0 +1,185 @@
+/* Resetting default styles for all elements */
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  text-decoration: none; /* Remove default text decoration */
+  list-style: none; /* Remove default list style */
+  outline: none; /* Remove default outline */
+  appearance: none; /* Remove default appearance */
+  border-style: none; /* Remove default border style */
+  color: #ffffff; /* Set default text color to white */
+  -webkit-font-smoothing: antialiased; /* Improve font rendering on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Improve font rendering on macOS */
+}
+
+/* Setting font family for specific elements */
+h1,
+h2,
+h3,
+span,
+p {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; /* Setting font family */
+}
+
+/* Styling for the root (html) and body elements */
+html,
+body {
+  width: 100%; /* Set width to full viewport width */
+  height: 100%; /* Set height to full viewport height */
+  background: #161623; /* Set background color */
+}
+
+/* Additional styling for the body element */
+body {
+  position: relative; /* Set position relative */
+  overflow: hidden; /* Hide overflowing content */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Arrange content in a column */
+  padding: 2em; /* Add padding */
+  background-image: url("./images/bg.avif"); /* Set background image */
+  background-size: cover; /* Cover background */
+}
+
+/* Styling for scrollbar */
+body::-webkit-scrollbar {
+  background: #020202; /* Set background color for scrollbar */
+  width: 10px; /* Set scrollbar width */
+}
+
+body::-webkit-scrollbar-track {
+  background: #020202; /* Set background color for scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ffffff; /* Set background color for scrollbar thumb */
+  border-radius: 1px; /* Set border radius for scrollbar thumb */
+}
+
+/* Styling for container element */
+.container {
+  position: relative; /* Set position relative */
+  z-index: 1; /* Set z-index */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-wrap: wrap; /* Allow wrapping */
+  padding: 1em; /* Add padding */
+}
+
+/* Styling for card element */
+.card {
+  position: relative; /* Set position relative */
+  width: 300px; /* Set width */
+  height: 400px; /* Set height */
+  margin: 1em; /* Add margin */
+  background: rgba(255, 255, 255, 0.05); /* Set background color with transparency */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  border-radius: 15px; /* Set border radius */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Arrange content in a column */
+  backdrop-filter: blur(10px); /* Apply backdrop filter for blurring */
+  border: solid 2px #fff; /* Set border */
+  background-clip: padding-box; /* Set background clip */
+  box-shadow: 0px 10px 10px rgba(46, 54, 68, 0.03); /* Add box shadow */
+}
+
+/* Styling for content inside card */
+.card .content {
+  position: relative; /* Set position relative */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Arrange content in a column */
+  opacity: 0.5; /* Set initial opacity */
+  transition: 0.5s; /* Add transition */
+}
+
+/* Styling for image inside card content */
+.card .content .img {
+  position: relative; /* Set position relative */
+  width: 150px; /* Set width */
+  height: 150px; /* Set height */
+  border-radius: 50%; /* Set border radius */
+  overflow: hidden; /* Hide overflowing content */
+  border: 10px solid rgba(0, 0, 0, 0.25); /* Set border */
+}
+
+/* Styling for image inside card content */
+.card .content .img img {
+  position: absolute; /* Set position absolute */
+  top: 0; /* Position from top */
+  left: 0; /* Position from left */
+  width: 100%; /* Set width to 100% */
+  height: 100%; /* Set height to 100% */
+  object-fit: cover; /* Set object fit */
+}
+
+/* Styling for card content heading */
+.card .content .cardContent h3 {
+  color: #fff; /* Set text color */
+  text-transform: uppercase; /* Transform text to uppercase */
+  letter-spacing: 2px; /* Set letter spacing */
+  font-weight: 500; /* Set font weight */
+  font-size: 18px; /* Set font size */
+  text-align: center; /* Center text */
+  margin: 20px 0 10px; /* Set margin */
+  line-height: 1.1em; /* Set line height */
+}
+
+/* Styling for span inside card content heading */
+.card .content .cardContent h3 span {
+  font-size: 12px; /* Set font size */
+  font-weight: 300; /* Set font weight */
+  text-transform: initial; /* Reset text transform */
+}
+
+/* Styling for social icons inside card */
+.card .sci {
+  position: absolute; /* Set position absolute */
+  bottom: 50px; /* Position from bottom */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: row; /* Arrange content in a row */
+}
+
+/* Styling for list items inside social icons */
+.card .sci li {
+  margin: 0 10px; /* Add margin */
+  transform: translateY(40px); /* Move element downwards */
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: 0.5s; /* Add transition */
+  transition-delay: calc(0.1s * var(--i)); /* Delay transition */
+}
+
+/* Styling for links inside list items */
+.card .sci li a {
+  font-size: 24px; /* Set font size */
+}
+
+/* Hover effect for card content */
+.card:hover .content {
+  opacity: 1; /* Set opacity to 1 on hover */
+  transform: translateY(-20px); /* Move element upwards on hover */
+}
+
+/* Hover effect for social icons */
+.card:hover .sci li {
+  transform: translateY(0px); /* Reset translation on hover */
+  opacity: 1; /* Set opacity to 1 on hover */
+}
+
+/* Keyframes for colorful animation */
+@keyframes colorful {
+  0% {
+    filter: hue-rotate(0deg); /* Rotate hue by 0 degrees */
+  }
+  100% {
+    filter: hue-rotate(360deg); /* Rotate hue by 360 degrees */
+  }
+}

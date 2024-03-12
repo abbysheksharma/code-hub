@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+      body {
+        padding: 0 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <section>
+        <h1>Contact Us</h1>
+        <form action="#" method="post">
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" required /><br />
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br />
+          <label for="subject">Subject:</label><br />
+          <input type="text" id="subject" name="subject" required /><br />
+          <label for="message">Message:</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="50"
+            required
+          ></textarea
+          ><br />
+          <label for="phone">Phone:</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="123-456-7890"
+            required
+          /><br /><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+      <hr />
+      <section>
+        <h2>Company Address</h2>
+        <address>
+          123 Main St,<br />
+          City,<br />
+          Country<br />
+          ZIP Code: 12345
+        </address>
+      </section>
+    </main>
+    <hr />
+    <footer>
+      <p>&copy; 2024 Our IT Solutions Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

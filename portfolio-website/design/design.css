@@ -437,4 +437,51 @@ progress {
 }
 .contact button[type=submit]:hover {
   background-color: #0056b3;
+}
+
+.footer {
+  display: flex;
+  background-color: #f2f2f2;
+  padding: 25px 50px;
+  font-family: "Montserrat", sans-serif;
+}
+.footer__col {
+  width: 25%;
+  min-height: 200px;
+}
+.footer__lists {
+  list-style-type: none;
+}
+.footer__list {
+  margin-top: 10px;
+}
+.footer__link {
+  text-decoration: none;
+  color: #0b0421;
+}
+.footer__link:hover {
+  color: #1b9ada;
+  text-decoration: underline;
+}
+.footer__logo {
+  max-width: 170px;
+}
+.footer__content {
+  margin-top: 20px;
+}
+.footer__content a {
+  color: #0b0421;
+}
+.footer__content a:not(:first-child) {
+  margin-left: 10px;
+}
+.footer__content a:hover {
+  color: #f0c244;
+}
+
+.copyright {
+  background-color: #0b0421;
+  padding: 10px;
+  color: #FFFFFF;
+  text-align: center;
 }/*# sourceMappingURL=design.css.map */

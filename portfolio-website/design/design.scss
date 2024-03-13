@@ -482,3 +482,48 @@ progress {
     background-color: #0056b3;
   }
 }
+.footer {
+  display: flex;
+  background-color: #f2f2f2;
+  padding: 25px 50px;
+  font-family: "Montserrat", sans-serif;
+  &__col {
+    width: 25%;
+    min-height: 200px;
+  }
+  &__lists {
+    list-style-type: none;
+  }
+  &__list {
+    margin-top: 10px;
+  }
+  &__link {
+    text-decoration: none;
+    color: $primary-color;
+    &:hover {
+      color: #1b9ada;
+      text-decoration: underline;
+    }
+  }
+  &__logo {
+    max-width: 170px;
+  }
+  &__content {
+    margin-top: 20px;
+    a {
+      color: $primary-color;
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+.copyright {
+  background-color: $primary-color;
+  padding: 10px;
+  color: $white;
+  text-align: center;
+}

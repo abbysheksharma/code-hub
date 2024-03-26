@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tab-container">
+      <div class="tab-buttons">
+        <button class="tab-button active">Home</button>
+        <button class="tab-button">Gallery</button>
+        <button class="tab-button">Videos</button>
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane active">
+          <h2>Welcome Home</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut earum
+            minus, facere placeat fuga impedit doloribus ratione natus! Quae
+            temporibus autem beatae blanditiis voluptate voluptatibus dolorem
+            distinctio, animi asperiores assumenda.
+          </p>
+        </div>
+        <div class="tab-pane">
+          <h2>Gallery</h2>
+          <div class="gallery-container">
+            <img src="./images/1.webp" alt="Image 1" />
+            <img src="./images/2.jpeg" alt="Image 2" />
+            <img src="./images/3.webp" alt="Image 3" />
+          </div>
+        </div>
+        <div class="tab-pane">
+          <h2>Videos</h2>
+          <div class="video-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/0qO05PdBBNA?si=Z3wDwS4F53nWOvA2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

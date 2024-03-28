@@ -1,0 +1,44 @@
+<!-- Chapter 3: Manipulating DOM Elements
+
+Once elements are selected, you can modify their styles, classes, attributes, and content. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manipulating Elements</title>
+    <style>
+      .highlighted {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Heading</h1>
+    <p id="paragraph">This is a paragraph.</p>
+    <a id="link" href="#">Link</a>
+    <img id="image" src="demo.jpg" alt="Placeholder" />
+
+    <script>
+      // Changing the text content of an element
+      const heading = document.getElementById("heading");
+      heading.textContent = "New Heading";
+
+      // Changing the HTML content of an element
+      const paragraph = document.getElementById("paragraph");
+      paragraph.innerHTML =
+        "<strong>Important:</strong> This is a new paragraph.";
+
+      // Adding/removing classes
+      heading.classList.add("highlighted");
+      paragraph.classList.remove("highlighted");
+
+      // Setting attributes
+      const link = document.getElementById("link");
+      link.setAttribute("href", "https://example.com");
+
+      const image = document.getElementById("image");
+      image.setAttribute("src", "image.jpg");
+      image.setAttribute("alt", "Example Image");
+    </script>
+  </body>
+</html>

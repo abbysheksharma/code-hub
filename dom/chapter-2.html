@@ -1,0 +1,40 @@
+<!-- Chapter 2: Selecting DOM Elements
+
+There are several ways to select DOM elements, such as getElementById, getElementsByTagName, getElementsByClassName, and querySelector/querySelectorAll.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selecting Elements</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Heading</h1>
+    <p class="highlight">Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+
+    <script>
+      // Selecting an element by its id
+      const heading = document.getElementById("heading");
+
+      // Selecting elements by their tag name
+      const paragraphs = document.getElementsByTagName("p");
+
+      // Selecting elements by their class name
+      const highlights = document.getElementsByClassName("highlight");
+
+      // Selecting an element using CSS selector
+      const firstHeading = document.querySelector("h1");
+
+      // Selecting all elements using CSS selector
+      const allLinks = document.querySelectorAll("a");
+    </script>
+  </body>
+</html>

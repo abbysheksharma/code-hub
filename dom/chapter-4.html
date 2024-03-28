@@ -1,0 +1,27 @@
+<!-- Chapter 4: Creating and Inserting DOM Elements
+
+You can dynamically create and insert new elements into the DOM. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Creating and Inserting Elements</title>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Content</h1>
+    </div>
+
+    <script>
+      // Creating a new element
+      const newParagraph = document.createElement("p");
+
+      // Setting the text content of the new element
+      newParagraph.textContent = "This is a new paragraph.";
+
+      // Inserting the new element into the DOM
+      const container = document.getElementById("content");
+      container.appendChild(newParagraph);
+    </script>
+  </body>
+</html>

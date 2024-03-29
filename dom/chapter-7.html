@@ -1,0 +1,23 @@
+<!-- Accessing Parent Elements
+
+You can access the parent element of a given element using the parentNode property or the parentElement property (for better compatibility across browsers).
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Traversing the DOM</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Heading</h1>
+      <p id="paragraph">Paragraph</p>
+    </div>
+
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      const parentDiv = paragraph.parentElement;
+      console.log(parentDiv.id); // Output: "container"
+    </script>
+  </body>
+</html>

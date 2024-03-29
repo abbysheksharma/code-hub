@@ -1,0 +1,20 @@
+<!-- Creating Attributes
+
+You can create a new attribute for an element using the setAttribute method. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Working with Attributes</title>
+  </head>
+  <body>
+    <a id="link" href="#">Link</a>
+
+    <script>
+      const link = document.getElementById("link");
+
+      // Creating a new attribute
+      link.setAttribute("data-custom-attribute", "Example Value");
+    </script>
+  </body>
+</html>

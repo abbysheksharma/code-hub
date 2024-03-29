@@ -1,0 +1,24 @@
+<!-- Accessing Sibling Elements
+
+You can access the next or previous sibling of an element using the nextElementSibling or previousElementSibling properties, respectively.
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Traversing the DOM</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Heading</h1>
+      <p id="firstParagraph">Paragraph 1</p>
+      <p>Paragraph 2</p>
+    </div>
+
+    <script>
+      const firstParagraph = document.getElementById("firstParagraph");
+      const nextSibling = firstParagraph.nextElementSibling;
+      console.log(nextSibling.textContent); // Output: "Paragraph 2"
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!-- Working with Attributes
+
+In HTML, attributes are used to provide additional information or modify the behavior of elements. With JavaScript, you can access, modify, and create attributes dynamically using various methods provided by the DOM.
+
+Accessing Attributes
+
+You can access the value of an attribute using the getAttribute method or by directly accessing the attribute property of an element. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Working with Attributes</title>
+  </head>
+  <body>
+    <a id="link" href="https://example.com" target="_blank">Link</a>
+
+    <script>
+      const link = document.getElementById("link");
+
+      // Using getAttribute method
+      const linkHref = link.getAttribute("href");
+      console.log(linkHref); // Output: "https://example.com"
+
+      // Accessing attribute property directly
+      const linkTarget = link.target;
+      console.log(linkTarget); // Output: "_blank"
+    </script>
+  </body>
+</html>

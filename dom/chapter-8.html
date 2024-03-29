@@ -1,0 +1,23 @@
+<!-- Accessing Child Elements
+To access the child elements of a given element, you can use the children property (for element nodes only) or the childNodes property (for all node types, including text nodes).
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Traversing the DOM</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Heading</h1>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+    </div>
+
+    <script>
+      const container = document.getElementById("container");
+      const paragraphs = container.children;
+      console.log(paragraphs.length); // Output: 2
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!-- DOM Manipulation Using Traversal 
+By combining element selection and traversal,
+you can perform complex DOM manipulations, such as moving elements, creating
+nested structures, or modifying the content of related elements. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Traversing the DOM</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Heading</h1>
+      <p id="paragraph">Paragraph</p>
+    </div>
+
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      const parentDiv = paragraph.parentElement;
+
+      // Creating a new element
+      const newHeading = document.createElement("h2");
+      newHeading.textContent = "New Heading";
+
+      // Inserting the new element before the paragraph
+      parentDiv.insertBefore(newHeading, paragraph);
+    </script>
+  </body>
+</html>
+
+<!-- In this example, we first select the paragraph element and its parent div container. Then, we create a new h2 element and set its text content. Finally, we use the insertBefore method of the parent div to insert the new heading before the existing paragraph. -->

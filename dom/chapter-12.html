@@ -1,0 +1,25 @@
+<!-- Modifying Attributes
+
+You can modify the value of an existing attribute using the setAttribute method or by directly assigning a new value to the attribute property. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Working with Attributes</title>
+  </head>
+  <body>
+    <img id="image" src="placeholder.jpg" alt="Placeholder" />
+
+    <script>
+      const image = document.getElementById("image");
+
+      // Modifying attribute using setAttribute method
+      image.setAttribute("src", "image.jpg");
+      image.setAttribute("alt", "Example Image");
+
+      // Modifying attribute property directly
+      image.width = "500";
+      image.height = "300";
+    </script>
+  </body>
+</html>

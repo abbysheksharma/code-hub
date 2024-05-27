@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Over Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="over-container">
+      <div id="balls-container" class="balls-container">
+        <!-- Circles representing balls in an over will be added here dynamically -->
+      </div>
+      <div class="buttons-container">
+        <button id="button-1">1</button>
+        <button id="button-2">2</button>
+        <button id="button-3">3</button>
+        <button id="button-4">4</button>
+        <button id="button-5">5</button>
+        <button id="button-6">6</button><br />
+        <button id="button-dot">Dot Ball</button>
+        <button id="button-wicket">Wicket</button>
+        <button id="button-wide">Wide Ball</button>
+        <button id="button-no">No Ball</button>
+      </div>
+      <div id="score-display" class="score-display">
+        <!-- Total score after each over will be displayed here -->
+      </div>
+      <div id="cumulative-score" class="cumulative-score">
+        <!-- Cumulative scores for each over will be displayed here -->
+      </div>
+      <div id="current-score"></div>
+    </div>
+    <script src="script.js"></script>
+    <!-- Ensure script is loaded at the end -->
+  </body>
+</html>

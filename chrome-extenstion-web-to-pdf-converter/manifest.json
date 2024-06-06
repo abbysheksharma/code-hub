@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Webpage to PDF Converter",
+  "version": "1.0",
+  "description": "Convert whole web page into PDF",
+  "permissions": ["activeTab", "scripting", "downloads"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["html2pdf.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

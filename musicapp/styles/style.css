@@ -1,0 +1,71 @@
+body {
+  background-color: #c6e8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: #aedeff;
+  box-shadow: -5px -5px 10px #fff, 5px 5px 10px #555;
+  width: 250px;
+  height: 350px;
+  padding: 20px;
+  border-radius: 25px;
+  position: relative;
+}
+.playlist {
+  list-style-type: none;
+  padding: 0;
+}
+.playlist > li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  width: 85%;
+  box-shadow: -3px -3px 2px #fff, 3px 3px 2px #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.playlist > li > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.button {
+  cursor: pointer;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.hide {
+  display: none;
+}
+.volume {
+  position: absolute;
+  right: -90px;
+  transform: rotate(-90deg);
+  top: 140px;
+  width: 214px !important;
+}
+.progress {
+  background-color: #555;
+  border-radius: 10px;
+  width: 90%;
+}
+.progress > .status {
+  width: 0%;
+  background-color: red;
+  height: 5px;
+  border-radius: 10px;
+}

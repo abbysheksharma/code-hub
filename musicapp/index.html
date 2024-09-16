@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <ul id="playlist" class="playlist">
+        <li data-src="./assets/songs/1.mp3">
+          <img src="./assets/images/1.png" alt="music cover" />Song 1
+        </li>
+        <li data-src="./assets/songs/2.mp3">
+          <img src="./assets/images/2.png" alt="music cover" />Song 2
+        </li>
+        <li data-src="./assets/songs/3.mp3">
+          <img src="./assets/images/3.png" alt="music cover" />Song 3
+        </li>
+        <li data-src="./assets/songs/4.mp3">
+          <img src="./assets/images/4.png" alt="music cover" />Song 4
+        </li>
+      </ul>
+
+      <div class="progress">
+        <div id="songStatus" class="status"></div>
+      </div>
+
+      <div class="button-container">
+        <button class="button circle" onclick="prevTrack()">Prev</button>
+        <button id="playBtn" class="button circle" onclick="playTrack()">
+          Play
+        </button>
+        <button id="pauseBtn" class="button circle hide" onclick="pauseTrack()">
+          Pause
+        </button>
+        <button class="button circle" onclick="nextTrack()">Next</button>
+      </div>
+
+      <input
+        id="volume"
+        type="range"
+        class="volume"
+        min="0"
+        max="1"
+        step="0.1"
+        value="0.5"
+        oninput="updateVolume()"
+      />
+    </div>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
